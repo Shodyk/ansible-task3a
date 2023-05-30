@@ -1,0 +1,18 @@
+- hosts: all
+  tasks:
+  - name: Install git
+    yum:
+      name: git
+      state: latest
+
+  - name: Clone app Repo
+    git:
+      repo: https://github.com/ikambarov/Flaskex
+      dest: /Flaskex
+
+  - name: Install pip
+    shell: "curl -s https://bootstrap.pypa.io/pip/2.7/get-pip.py | python"
+
+#pip install -r requirements.txt
+#python app.py
+
