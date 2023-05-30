@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: alll
   tasks:
   - name: Install git
     yum:
