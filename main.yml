@@ -1,4 +1,4 @@
-- hosts: vm2
+- hosts: all
   tasks:
   - name: Install git
     yum:
@@ -13,6 +13,11 @@
   - name: Install pip
     shell: "curl -s https://bootstrap.pypa.io/pip/2.7/get-pip.py | python"
 
-#pip install -r requirements.txt
-#python app.py
-
+  - name: pip requirements
+    pip:
+      requirements: /Flaskex/requirements.txt
+  
+  - name: Start app
+    shell: "pkil app.py; nohup python app.py &"
+    args:
+      chdir: /Flaskex
