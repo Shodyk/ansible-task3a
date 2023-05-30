@@ -1,4 +1,4 @@
-- hosts: all finish
+- hosts: vm2
   tasks:
   - name: Install git
     yum:
