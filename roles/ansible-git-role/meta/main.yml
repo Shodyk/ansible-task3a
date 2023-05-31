@@ -1,0 +1,9 @@
+galaxy_info:
+  author: Shodi Kholmurodzoda
+  description: This is role installs pip2
+  license: MIT
+  min_ansible_version: 2.9
+  galaxy_tags:
+  - pip
+  - pip2
+dependencies: []
